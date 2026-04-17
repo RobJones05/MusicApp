@@ -10,9 +10,12 @@ class Song (songName: String, songArtist: String, songYear: Int, songDuration: S
     var year: Int = 0
     var duration: = ""
 
+    //initialising variables
     init{
         name = songName
         artist = songArtist
+        year = songYear
+        duration = songDuration
     }
 
     //function to play somg
