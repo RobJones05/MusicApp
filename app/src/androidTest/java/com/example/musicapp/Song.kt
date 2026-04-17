@@ -8,7 +8,12 @@ class Song (songName: String, songArtist: String, songYear: Int, songDuration: S
     var name: String = ""
     var artist: String = ""
     var year: Int = 0
-    var duration: = ""
+    var duration: String = ""
+
+    constructor(songName: String, songArtist: String) : this(songName, songArtist, 0, ""){}
+
+
+
 
     //initialising variables
     init{
@@ -18,7 +23,7 @@ class Song (songName: String, songArtist: String, songYear: Int, songDuration: S
         duration = songDuration
     }
 
-    //function to play somg
+    //function to play song
     fun PLay(){
         Log.v("song", "$name is playing")
     }
@@ -38,4 +43,7 @@ class Song (songName: String, songArtist: String, songYear: Int, songDuration: S
         Log.v("song", "$name is favourited")
     }
 
+    fun DisplaySong() : String{
+        return "$name - $artist ($duration)"
+    }
 }
