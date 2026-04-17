@@ -1,19 +1,16 @@
 package com.example.musicapp
 
 import android.util.Log
-import android.util.Log.v
 
 class Song (songName: String, songArtist: String, songYear: Int, songDuration: String) {
-    //created variables to hold song objects attributes
+    //created variables to hold song object's attributes
     var name: String = ""
     var artist: String = ""
     var year: Int = 0
     var duration: String = ""
 
-    constructor(songName: String, songArtist: String) : this(songName, songArtist, 0, ""){}
-
-
-
+    constructor(songName: String, songArtist: String) : this(songName, songArtist, 0, ""){
+    }
 
     //initialising variables
     init{
@@ -24,25 +21,27 @@ class Song (songName: String, songArtist: String, songYear: Int, songDuration: S
     }
 
     //function to play song
-    fun PLay(){
-        Log.v("song", "$name is playing")
+    fun Play(){
+        Log.v("Song ", "$name is playing.")
     }
 
     //function to pause song
     fun Pause(){
-        Log.v("Song", "$name is paused")
+        Log.v("Song ", "$name is paused.")
     }
 
     //function to stop song
     fun Stop(){
-        Log.v("song", "$name has stopped")
+        Log.v("Song ", "$name is stopped.")
     }
 
     //function to favourite song
-    fun Favourite(){
-        Log.v("song", "$name is favourited")
+    fun Favourite() : Boolean{
+        Log.v("Song ", "$name is favourited.")
+        return true
     }
 
+    //function to display the songs
     fun DisplaySong() : String{
         return "$name - $artist ($duration)"
     }
